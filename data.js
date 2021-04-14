@@ -67,7 +67,7 @@ function getStudents(){
 function getTeachers(){
     let myPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
-            // assume we fetch the teahers from somehwere
+            // assume we fetch the teachers from somehwere
             // we resolve the promise and pass the `instructors` declared at the top of the file
             resolve(instructors)
         }, 1000)

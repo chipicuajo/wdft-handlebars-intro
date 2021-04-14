@@ -18,10 +18,18 @@ app.use((req, res, next) => {
 // letting your middleware know where to find all static files
 app.use(express.static(__dirname + "/public"));
 
+//tell express that you are using hbs as template engine
+app.set('view engine', 'hbs')
 // ROUTES DEFINED BELOW
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + '/views/landing.html')
+    // console.log(students)
+    res.render(__dirname + '/views/landing.hbs', {name: "Franco", age: 21, students: students})
+});
+
+app.get("/instructors", (req, res) => {
+    // console.log(instructors)
+    res.render(__dirname + '/views/instructors.hbs', {name: "Franco", age: 21, instructors:instructors})
 });
 
 

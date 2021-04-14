@@ -9,7 +9,12 @@
 </head>
 
 <body>
-    <div>Hello, you're in landing page</div>
+    <div>Hello {{name}}, you're in landing page</div>
+    <div>I am {{age}} years old</div>
+    <h1>Students</h1>
+    {{#each students}}
+    <p>{{this.name}}</p>
+    {{/each}}
 </body>
 
 </html>
